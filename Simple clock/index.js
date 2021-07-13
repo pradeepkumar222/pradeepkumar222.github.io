@@ -2,10 +2,14 @@ let a;
 let hour;
 let mints;
 let sec;
-let date;
+let day;
+let monthh;
+let year;
+//let c;
+
 setInterval(() => {
     a= new Date;
-
+c=a.toLocaleDateString()
 hour=a.getHours()
 mints=a.getMinutes()
 sec = a.getSeconds()
@@ -14,9 +18,10 @@ document.getElementById("b").innerHTML = hour;
 document.getElementById("c").innerHTML = mints;
 document.getElementById("d").innerHTML = ":";
 document.getElementById("e").innerHTML = sec;
-}, 1000);
-c=a.toISOString().split('T')[0]
 document.getElementById("date").innerHTML = "On the Date : "+c+" time is .... ";
+}, 1000);
+console.log(c);
+
 
 
 
